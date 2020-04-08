@@ -1,8 +1,9 @@
 <templateSet group="MyTemplates">
-  <template name="/" value="/**&#10; * @method  $methodName$&#10; * @description 写方法描述&#10; * @date: $date$ $time$&#10; * @author: Stars Email:wdlpszy@163.com&#10;$param$&#10; * @return $return$&#10; */&#10;" shortcut="ENTER" description="add method comment" toReformat="false" toShortenFQNames="true">
+  <template name="/" value="/**&#10; * @method  $methodName$&#10; * @description $VAR1$&#10; * @date: $date$ $time$&#10; * @author: Stars Email:wdlpszy@163.com&#10;$param$&#10; * @return $return$&#10; */&#10;" shortcut="ENTER" description="add method comment" toReformat="false" toShortenFQNames="true">
     <variable name="methodName" expression="methodName()" defaultValue="" alwaysStopAt="false" />
-    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="true" />
-    <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR1" expression="" defaultValue="&quot;写方法描述&quot;" alwaysStopAt="true" />
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="time" expression="time()" defaultValue="" alwaysStopAt="false" />
     <variable name="param" expression="" defaultValue="groovyScript(&quot;def result=''; def params=\&quot;${_1}\&quot;.replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); for(i = 0; i &lt; params.size(); i++) {result+=' * @param ' + params[i] + ((i &lt; params.size() - 1) ? '\\n\\b' : '')}; return result&quot;, methodParameters())" alwaysStopAt="false" />
     <variable name="return" expression="methodReturnType()" defaultValue="" alwaysStopAt="false" />
     <context>
