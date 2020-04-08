@@ -1,5 +1,5 @@
 <templateSet group="MyTemplates">
-  <template name="/" value="/**&#10; * @method  $methodName$&#10; * @description $VAR1$&#10; * @date: $date$ $time$&#10; * @author: Stars Email:wdlpszy@163.com&#10;$param$&#10; * @return $return$&#10; */&#10;" shortcut="ENTER" description="add method comment" toReformat="false" toShortenFQNames="true">
+  <template name="/**" value="/**&#10; * @method  $methodName$&#10; * @description $VAR1$&#10; * @date: $date$ $time$&#10; * @author: Stars Email:wdlpszy@163.com&#10;$param$&#10; * @return $return$&#10; */&#10;" shortcut="ENTER" description="add method comment" toReformat="false" toShortenFQNames="true">
     <variable name="methodName" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="VAR1" expression="" defaultValue="&quot;写方法描述&quot;" alwaysStopAt="true" />
     <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
